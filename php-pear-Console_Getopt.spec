@@ -1,16 +1,18 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		Console
 %define		_subclass	Getopt
+%define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
+
 Summary:	%{_pearname} - Command-line option parser
 Summary(pl):	%{_pearname} - Parser opcji linii poleceñ
 Name:		php-pear-%{_pearname}
-Version:	1.0
-Release:	2
+Version:	1.1
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-# Source0-md5:	0a80d98559c9c0d20f6128b5edcb9aac
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+# Source0-md5:	0495fd7bd90eb9153065ef1924188986
 URL:		http://pear.php.net/package/Console_Getopt/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -21,9 +23,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This is a PHP implementation of "getopt" supporting both short and
 long options.
 
+This class has in PEAR status: %{_status}.
+
 %description -l pl
 Jest to PHPowa implementacja "getopt" wspieraj±ca d³ugie i krótkie
 opcje.
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
