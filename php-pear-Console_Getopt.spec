@@ -2,8 +2,8 @@
 %define		_class		Console
 %define		_subclass	Getopt
 %define		_pearname	%{_class}_%{_subclass}
-Summary:	Console_Getopt - Command-line option parser
-Summary(pl):	Console_Getopt - Parser opcji linii poleceñ
+Summary:	%{_class}_%{_subclass} - Command-line option parser
+Summary(pl):	%{_class}_%{_subclass} - Parser opcji linii poleceñ
 Name:		php-pear-%{_pearname}
 Version:	0.11
 Release:	1
