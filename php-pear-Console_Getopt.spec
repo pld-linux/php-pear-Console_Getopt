@@ -26,7 +26,7 @@ long options.
 In PEAR status of this package is: %{_status}.
 
 %description -l pl
-Jest to PHPowa implementacja "getopt" wspieraj±ca d³ugie i krótkie
+Jest to PHP-owa implementacja "getopt" wspieraj±ca d³ugie i krótkie
 opcje.
 
 Ta klasa ma w PEAR status: %{_status}.
