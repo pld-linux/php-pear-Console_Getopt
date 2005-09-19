@@ -1,5 +1,4 @@
 %include	/usr/lib/rpm/macros.php
-%include	/usr/lib/rpm/macros.pear
 %define		_class		Console
 %define		_subclass	Getopt
 %define		_status		stable
@@ -15,7 +14,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	8f9ec8253c04350bc01ee7ca941e24b6
 URL:		http://pear.php.net/package/Console_Getopt/
-BuildRequires:	php-pear-build
+BuildRequires:	rpm-php-pearprov >= 4.4.2-10.2
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
