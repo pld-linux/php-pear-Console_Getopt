@@ -3,12 +3,11 @@
 %define		_subclass	Getopt
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
-
 Summary:	%{_pearname} - Command-line option parser
 Summary(pl):	%{_pearname} - Parser opcji linii poleceñ
 Name:		php-pear-%{_pearname}
 Version:	1.2
-Release:	3
+Release:	4
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
