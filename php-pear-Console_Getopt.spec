@@ -7,7 +7,7 @@ Summary:	%{_pearname} - Command-line option parser
 Summary(pl):	%{_pearname} - Parser opcji linii poleceñ
 Name:		php-pear-%{_pearname}
 Version:	1.2
-Release:	4
+Release:	5
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
