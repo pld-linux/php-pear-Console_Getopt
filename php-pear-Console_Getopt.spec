@@ -4,7 +4,7 @@
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_pearname} - Command-line option parser
-Summary(pl):	%{_pearname} - Parser opcji linii poleceñ
+Summary(pl.UTF-8):   %{_pearname} - Parser opcji linii poleceÅ„
 Name:		php-pear-%{_pearname}
 Version:	1.2.1
 Release:	1
@@ -26,8 +26,8 @@ long options.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Jest to PHP-owa implementacja "getopt" wspieraj±ca d³ugie i krótkie
+%description -l pl.UTF-8
+Jest to PHP-owa implementacja "getopt" wspierajÄ…ca dÅ‚ugie i krÃ³tkie
 opcje.
 
 Ta klasa ma w PEAR status: %{_status}.
