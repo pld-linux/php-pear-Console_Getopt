@@ -4,7 +4,7 @@
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_pearname} - Command-line option parser
-Summary(pl.UTF-8):   %{_pearname} - Parser opcji linii poleceń
+Summary(pl.UTF-8):	%{_pearname} - Parser opcji linii poleceń
 Name:		php-pear-%{_pearname}
 Version:	1.2.1
 Release:	1
