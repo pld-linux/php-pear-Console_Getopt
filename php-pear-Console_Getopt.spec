@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - Command-line option parser
 Summary(pl.UTF-8):	%{_pearname} - Parser opcji linii poleceń
 Name:		php-pear-%{_pearname}
-Version:	1.2.1
+Version:	1.2.2
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	2d9bcd0a63d1040fff6ca7efd8a42e20
+# Source0-md5:	88ac4fc1bf4e3b25c04198e19e9412e9
 URL:		http://pear.php.net/package/Console_Getopt/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
