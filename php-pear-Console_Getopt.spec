@@ -1,17 +1,15 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		Console
-%define		_subclass	Getopt
 %define		_status		stable
-%define		_pearname	%{_class}_%{_subclass}
+%define		_pearname	Console_Getopt
 Summary:	%{_pearname} - Command-line option parser
 Summary(pl.UTF-8):	%{_pearname} - Parser opcji linii poleceń
 Name:		php-pear-%{_pearname}
-Version:	1.2.3
-Release:	3
+Version:	1.3.0
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	d7618327f9302a7191893768982de823
+# Source0-md5:	d8e9e8e5efc5a4afdc7e62b294b2655e
 URL:		http://pear.php.net/package/Console_Getopt/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -49,4 +47,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc install.log
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/*.php
+%{php_pear_dir}/Console/*.php
