@@ -1,17 +1,23 @@
+#
+# Conditional build:
+%bcond_with	bootstrap	# bootstrap build without PEAR installed (for first php-pear-PEAR installation)
+
+%define		status		stable
+%define		pearname	Console_Getopt
 %include	/usr/lib/rpm/macros.php
-%define		_status		stable
-%define		_pearname	Console_Getopt
-Summary:	%{_pearname} - Command-line option parser
-Summary(pl.UTF-8):	%{_pearname} - Parser opcji linii poleceń
-Name:		php-pear-%{_pearname}
+Summary:	%{pearname} - Command-line option parser
+Summary(pl.UTF-8):	%{pearname} - Parser opcji linii poleceń
+Name:		php-pear-%{pearname}
 Version:	1.4.1
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
 # Source0-md5:	f9276d111618284efb3f900b6f753c6a
 URL:		http://pear.php.net/package/Console_Getopt/
+%if %{without bootstrap}
 BuildRequires:	php-pear-PEAR
+%endif
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-pear
@@ -24,27 +30,39 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This is a PHP implementation of "getopt" supporting both short and
 long options.
 
-In PEAR status of this package is: %{_status}.
+In PEAR status of this package is: %{status}.
 
 %description -l pl.UTF-8
 Jest to PHP-owa implementacja "getopt" wspierająca długie i krótkie
 opcje.
 
-Ta klasa ma w PEAR status: %{_status}.
+Ta klasa ma w PEAR status: %{status}.
 
 %prep
+%if %{without bootstrap}
 %pear_package_setup
+%else
+%setup -q -c -n %{pearname}-%{version}
+%{__mv} %{pearname}-%{version}/* .
+%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
+
+%if %{without bootstrap}
 %pear_package_install
+%else
+cp -pr Console $RPM_BUILD_ROOT%{php_pear_dir}
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%if %{without bootstrap}
 %doc install.log
-%{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/Console/*.php
+%{php_pear_dir}/.registry/console_getopt.reg
+%endif
+%{php_pear_dir}/Console/Getopt.php
