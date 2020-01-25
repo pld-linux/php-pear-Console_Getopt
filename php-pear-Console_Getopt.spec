@@ -4,7 +4,6 @@
 
 %define		status		stable
 %define		pearname	Console_Getopt
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Command-line option parser
 Summary(pl.UTF-8):	%{pearname} - Parser opcji linii poleceń
 Name:		php-pear-%{pearname}
