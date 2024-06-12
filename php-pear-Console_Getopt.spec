@@ -8,7 +8,7 @@ Summary:	%{pearname} - Command-line option parser
 Summary(pl.UTF-8):	%{pearname} - Parser opcji linii poleceń
 Name:		php-pear-%{pearname}
 Version:	1.4.3
-Release:	1
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
